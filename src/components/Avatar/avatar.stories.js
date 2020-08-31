@@ -6,7 +6,6 @@ import face2 from 'assets/images/face-female-2.jpg';
 import face3 from 'assets/images/face-female-3.jpg';
 import face4 from 'assets/images/face-female-4.jpg';
 
-import 'story.css';
 
 export default {
   title: 'UI 组件/Avatar',

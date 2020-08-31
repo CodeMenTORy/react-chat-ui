@@ -14,6 +14,7 @@ export default {
   component: Icon,
 };
 
+// 自定义 Icon组件
 export const Default = () => <Icon icon={SmileIcon} />;
 
 export const CustomColor = () => <Icon icon={SmileIcon} color="#cccccc" />;
@@ -22,6 +23,7 @@ export const CustomSize = () => (
   <Icon icon={SmileIcon} width={48} height={48} color="#cccccc" />
 );
 
+//  font awesome 插件
 export const FontAwesome = () => {
   return <FontAwesomeIcon icon={faCommentDots} />;
 };

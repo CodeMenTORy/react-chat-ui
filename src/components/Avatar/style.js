@@ -1,13 +1,11 @@
 import styled, { css } from 'styled-components';
+import { circle } from 'utils/mixins';
 
 const circleMixinFunc = (color, size = '8px') => css`
   content: '';
   display: block;
   position: absolute;
-  width: ${size};
-  height: ${size};
-  border-radius: 50%;
-  background-color: ${color};
+  ${circle(color, size)}
 `;
 
 const StyledAvatar = styled.div`
@@ -20,7 +18,7 @@ const StatusIcon = styled.div`
   top: 4px;
   /* 状态栏大圆 */
   &::before {
-    ${({size}) => circleMixinFunc('white', size)}
+    ${({ size }) => circleMixinFunc('white', size)}
     transform: scale(2);
   }
   /* 状态栏小圆 */
