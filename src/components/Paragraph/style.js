@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import StyledText from 'components/Text/style';
 
-const Styledparagraph = styled(StyledText)`
+const StyledParagraph = styled(StyledText)`
   ${({ ellipsis }) =>
     ellipsis &&
     css`
@@ -11,4 +11,4 @@ const Styledparagraph = styled(StyledText)`
     `}
 `;
 
-export default Styledparagraph;
+export default StyledParagraph;
