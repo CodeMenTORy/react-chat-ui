@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import StyledText from 'components/Text/style';
 
 const StyledParagraph = styled(StyledText)`
+  margin: 0;
   ${({ ellipsis }) =>
     ellipsis &&
     css`
