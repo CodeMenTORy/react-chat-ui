@@ -28,6 +28,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['primary']),
   shape: PropTypes.oneOf(['circle', 'react']),
   size: PropTypes.string,
+  bgColor: PropTypes.string,
 };
 
 export default Button;
