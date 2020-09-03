@@ -36,7 +36,7 @@ function Popover({
 Popover.propTypes = {
   children: PropTypes.any,
   content: PropTypes.any,
-  offset: PropTypes.shape({ x: PopTypes.string, y: PropTypes.string }),
+  offset: PropTypes.shape({ x: PropTypes.string, y: PropTypes.string }),
   onVisible: PropTypes.func,
   onHide: PropTypes.func,
 };
