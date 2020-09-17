@@ -33,6 +33,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 function Profile({
+  onCloseClick,
   showEditBtn,
   showCloseIcon = true,
   onEdit,
@@ -42,7 +43,7 @@ function Profile({
 }) {
   return (
     <StyledProfile {...rest}>
-      {showCloseIcon && <CloseIcon icon={Cross} />}
+      {showCloseIcon && <CloseIcon icon={Cross} onClick={onCloseClick} />}
       <Avatar
         css={`
           margin: 26px 0;
