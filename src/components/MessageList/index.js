@@ -6,8 +6,10 @@ import MessageCard from 'components/MessageCard';
 
 import face1 from 'assets/images/face-female-1.jpg';
 import FilterList from 'components/FilterList';
-
+import { animated } from 'react-spring';
+import useStaggeredList from 'hooks/useStaggeredList';
 function MessageList({ children, ...rest }) {
+  const trailAnimes = useStaggeredList(6);
   return (
     <StyledMessageList {...rest}>
       <FilterList
@@ -16,18 +18,20 @@ function MessageList({ children, ...rest }) {
       >
         <ChatList>
           {[1, 2, 3, 4, 5, 6].map((_, index) => (
-            <MessageCard
-              key={index}
-              active={index === 3}
-              replied={index % 3 === 0}
-              avatarSrc={face1}
-              name="汤泽一"
-              avatarStatus="online"
-              statusText="在线"
-              time="3 小时之前"
-              message="这是一段说了谢谢反而亏欠的情感"
-              unreadCount={2}
-            />
+            <animated.div key={index} style={trailAnimes[index]}>
+              <MessageCard
+                key={index}
+                active={index === 3}
+                replied={index % 3 === 0}
+                avatarSrc={face1}
+                name="汤泽一"
+                avatarStatus="online"
+                statusText="在线"
+                time="3 小时之前"
+                message="这是一段说了谢谢反而亏欠的情感"
+                unreadCount={2}
+              />
+            </animated.div>
           ))}
         </ChatList>
       </FilterList>
